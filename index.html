@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#bhide').on('click', function () { $('#phide').hide(); })
+            $('#mostrar').on('click', function () { $('#phide').show(); })
+            $('#tog').on('click', function () { $('#phide').toggle(); })
+            $("#sldn").click(function () { $("#sldntxt").slideDown("slow"); });
+            $("#slup").click(function () { $("#sluptxt").slideUp("slow"); });
+            $('#fadtgl').on('click', function () { $('#txtfdtgle').fadeToggle(); });
+            $('#fadto').on('click', function () { $('#txtfdto').fadeTo(1500, 0.5); });
+            $('#addingcls').on('click', function () { $('#txtaddcls').addClass('text-light'); });
+            $('#bfring').on('click', function () { $('#txtbfr').before('<p> Before </p>'); });
+            $('#aftring').on('click', function () { $('#txtaft').after('<p> After </p>'); });
+            $('#appendbtn').on('click', function () { $('#colapnd').append('<h6> Hola, me agregaron con append </h6>'); });
+            $('#htmlbtn').on('click', function () { $('#colhtm').html('Hola, esta vez con html'); });
+            $('#attrbtn').on('click', function () { $('#colattr').attr('style', 'border:solid'); });
+        
+
+
+        });
+    </script>
+    <style>
+        * {
+            text-align: center;
+            align-self: center;
+        }
+
+        .col-2 {
+            width: -webkit-fill-available;
+            border: none;
+            height: 80px;
+            padding-top: 25px;
+        }
+
+        .col-6 {
+            width: -webkit-fill-available;
+            border: none;
+            height: 80px;
+            padding-top: 14px;
+        }
+
+
+        .row {
+            place-content: center;
+        }
+
+        #sldntxt {
+            display: none;
+        }
+
+        #backtog {
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container p-1" style="height: 125px;">
+        <div class="row p-4  text-center">
+            <div class="col-2">
+                <button id="bhide"> Esconder </button>
+            </div>
+            <div class="col-6">
+                <h5 id="phide">Apreta "Esconder" para desaparecer el parrafor y "Mostrar" para volver a mostrarlo</h5>
+            </div>
+            <div class="col-2">
+                <button id="mostrar">Mostrar</button>
+            </div>
+        </div>
+    </div>
+    <div class="container p-1" style="height: 125px;">
+        <div class="row p-4  text-center">
+            <div class="col-2 pt-5" id="backtog">
+                <button id="tog"> Interruptor</button>
+            </div>
+            <div class="col-5">
+                <h5> Con el boton "Interruptor" puedes esconder y mostrar el parrafo superior con un solo boton</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container p-1" style="height: 125px;">
+        <div class="row p-4  text-center">
+            <div class="col-2">
+                <button id="sldn"> Deslizar hacia abajo</button>
+            </div>
+            <div class="col-5">
+                <h5 id="sldntxt"> Apretando este boton se mostrara el texto deslizandose hacia abajo</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container p-1" style="height: 125px;">
+        <div class="row p-4  text-center">
+            <div class="col-2">
+                <button id="slup"> Deslizar hacia arriba</button>
+            </div>
+            <div class="col-5">
+                <h5 id="sluptxt"> Esto es exactamente lo mismo que lo anterior pero en la direccion contraria y sirve para esconder el texto</h5>
+            </div>
+        </div>
+    </div>
+    <div class="container p-1" style="height: 125px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="fadtgl">Interruptor Desvanecedor</button>
+            </div>
+            <div class="col-6">
+                <h5 id="txtfdtgle"> Este boton hace lo mismo que el interruptor pero con un efecto de desvanecer</h5>
+            </div>
+            <div class="col-"></div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 125px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="fadto">fadeTo</button>
+            </div>
+            <div class="col-6">
+                <h5 id="txtfdto"> Esto simplemente le quita un poco de color y contraste el texto, como si estuviera medio borrado</h5>
+            </div>
+            <div class="col-"></div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 125px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="addingcls">addclass</button>
+            </div>
+            <div class="col-6">
+                <h5 id="txtaddcls" class=""> El addclass permite agregarle clases al texto, en este caso para cambiar el color a blanco </h5>
+            </div>
+            <div class="col-"></div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 125px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="bfring">before</button>
+            </div>
+            <div class="col-"></div>
+            <div class="col-6">
+                <h5 id="txtbfr" class=" m-1"> Con el before se agrega texto antes del parrafo seleccionado </h5>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 155px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-5">
+                <button id="aftring">after</button>
+            </div>
+            <div class="col-"></div>
+            <div class="col-6" style="height: 95px;">
+                <h6 id="txtaft" class=" m-1"> Con el after se agrega despues </h6>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 155px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="appendbtn">append</button>
+            </div>
+            <div class="col-" id="colapnd"></div>
+            <div class="col-6">
+                <h6 class=" m-1"> Con el append tambien se agrega un parrafo pero sin estar directamente arriba o abajo </h6>
+            </div>  
+        </div>
+    </div>
+    <div class="container p-2" style="height: 155px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="htmlbtn">html</button>
+            </div>
+            <div class="col-" id="colhtm"></div>
+            <div class="col-6">
+                <h6 class=" m-1"> Html es parecido al append pero mas personalizable  </h6>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2" style="height: 155px;">
+        <div class="row p-4 text-center">
+            <div class="col-2 p-4">
+                <button id="attrbtn">attr</button>
+            </div>
+            <div class="col-"></div>
+            <div class="col-6" id="colattr">
+                <h6 class=" m-1"> Con attr se puede agregar o quitar atributos, en este caso para agregarle u marco </h6>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="div1" id="text"></div>
+
+
+</body>
+
+</html>
